@@ -1,0 +1,30 @@
+Extracts from decompiled C# declarations (full source paths are in FINDINGS.md).
+Methods are empty Cpp2IL stubs — these names establish that the APIs/paths exist,
+not that a mode is selected at runtime or how often it is used.
+
+OpponentProvider.cs:
+  GetRandomOpponents(...)
+  GetRandomOpponentsForElo(...)
+  GetRandomOpponentsForTrophyCount(...)
+
+AiOpponentPlayer.cs:
+  AiOpponentPlayer : IBattlePlayer
+  PickCard(...)
+  PickDraftCardAsync(...)
+  _aiSmartness
+
+GhostOpponentBuilder.cs:
+  RollAiSmartness(...)
+  TryCreate(PlayerPublicProfileData publicProfile, int seekerTrophies,
+            out OpponentData opponent)
+
+NetworkOpponentPlayer.cs:
+  NetworkOpponentPlayer : IBattlePlayer
+
+RatedMatchSession.cs:
+  FindOpponents(...)
+  FallbackCsv(...)
+  TryBuildGhost(...)
+
+NakamaRpcClient.cs:
+  ServiceName = "nakama.api.RatedMatchmaking"

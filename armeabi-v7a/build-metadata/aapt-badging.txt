@@ -1,0 +1,21 @@
+Source files parsed: armeabi-v7a/base/AndroidManifest.xml + base/resources.arsc
+Command: aapt dump badging on a temporary ZIP/APK container holding those files.
+
+package: name='com.QuestLab.DraftWar' versionCode='812' versionName='1.18.0'
+targetSdkVersion:'36'
+application-label: 'Draft Showdown'
+
+Relevant requested permissions:
+android.permission.INTERNET
+com.google.android.gms.permission.AD_ID
+com.adjust.preinstall.READ_PERMISSION
+android.permission.ACCESS_ADSERVICES_AD_ID
+android.permission.ACCESS_ADSERVICES_ATTRIBUTION
+android.permission.ACCESS_ADSERVICES_TOPICS
+com.android.vending.BILLING
+
+Comparison: the same aapt procedure on the ARM64 source files reports
+versionCode='745' versionName='1.17.1', same package and target SDK 36.
+
+Permissions prove that the build requests these OS capabilities. They do not
+prove that the app actually accessed or transmitted advertising identifiers.

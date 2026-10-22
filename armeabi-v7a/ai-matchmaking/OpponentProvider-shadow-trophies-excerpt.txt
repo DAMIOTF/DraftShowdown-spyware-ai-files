@@ -1,0 +1,10 @@
+Source: Cpp2IL-wynik-cs/DiffableCs/Scripts/QuestLab/DraftWar/OpponentProvider.cs
+
+Lines 210–218 declare:
+  GetRandomOpponents(...)
+  GetRandomOpponentsForElo(...)
+  GetRandomOpponentsForTrophyCount(..., bool useShadowTrophies = true)
+  GetRandomTestOpponent()
+
+The methods are Cpp2IL stubs. Their presence establishes APIs for local/random
+opponent pools; it does not establish their use in live matchmaking.

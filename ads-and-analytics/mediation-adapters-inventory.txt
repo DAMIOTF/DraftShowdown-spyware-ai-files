@@ -1,0 +1,24 @@
+Source: directory names under
+base/META-INF/com/applovin/mediation/*/verification.properties
+in the original decompilation (verification tokens are not included).
+
+The build contains adapter manifests for:
+- bidmachine-adapter
+- bytedance-adapter
+- facebook-adapter
+- fyber-adapter
+- google-adapter
+- google-ad-manager-adapter
+- inmobi-adapter
+- ironsource-adapter
+- mintegral-adapter
+- moloco-adapter
+- pubmatic-adapter
+- unityads-adapter
+- verve-adapter
+- vungle-adapter
+- yandex-adapter
+- yso-network-adapter
+
+Interpretation: these adapters are bundled in the analyzed build. This list does
+not establish that each network was configured, active, or displayed an ad to a user.

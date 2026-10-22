@@ -1,0 +1,16 @@
+Source: Cpp2IL-wynik-cs/DiffableCs/Scripts/QuestLab/DraftWar/NakamaRpcClient.cs
+
+FindMatchResp, lines 282–294:
+  Found, Ticket, OpponentId, PlayerMmr, PlayerRd, OppMmr, OppRd,
+  CandidatesFound, Tier, Relaxations
+
+GetCandidateDebugResp, lines 310–328:
+  HumanStrength, HumanUncertainty, HumanVolatility, HumanLastSeen,
+  GhostStrength, GhostUncertainty, GhostVolatility, GhostConverged,
+  GhostLastSeen, LastActive, LastServed, RecentOpponents, HasLiveTicket
+
+Line 398:
+  private const string ServiceName = "nakama.api.RatedMatchmaking";
+
+This is structural evidence that the rated-match protocol distinguishes human
+and ghost candidate metrics. It does not quantify how often ghosts are selected.

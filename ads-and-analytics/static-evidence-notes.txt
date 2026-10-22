@@ -1,0 +1,30 @@
+Static evidence from the ARM64 build; see ../FINDINGS.md for source paths and limitations.
+
+ADVERTISING
+- AdDisplayConditions.cs declares interstitial/app-open eligibility states,
+  games played since the last interstitial, and time thresholds.
+- Visible built-in defaults: 5 seconds between rewarded video and interstitial;
+  60 seconds for two app-open conditions.
+- VoodooSettings.cs: editor descriptions specify time delays, games between
+  interstitials, and an option to replace a rewarded ad with an interstitial
+  when the interstitial CPM is higher. These are settings/API descriptions, not
+  proof that the option was enabled in the released build.
+- AdsManager.cs / Interstitial.cs (original): the API has a second interstitial
+  and a ShowTwoFsInARow method. This confirms SDK capability, not use in a session.
+
+ANALYTICS / IDENTIFIERS
+- VoodooAnalyticsEventParameters.cs lists fields/getters for advertising ID,
+  developer device ID, gaming ID, user ID, device model, OS, locale, resolution,
+  IDFA status, A/B and segmentation UUIDs, current level, game count and consent states.
+- SharedAnalyticsEventPersister.cs contains the endpoint
+  https://vs-api.voodoo-{0}.io/push-analytics-v2 and a PersistEvent(...) declaration.
+- AnalyticsSettings.cs has configuration fields for Firebase Analytics, Remote Config,
+  Voodoo Analytics, Adjust, GameAnalytics and Facebook.
+- AdjustWrapper.cs exposes APIs for Adjust/ADID, consent state, third-party sharing,
+  events and ad revenue.
+
+LIMITATION
+DiffableCs contains generated declarations with empty method bodies. The endpoint,
+fields and APIs show tracking capability/design; they are not captured network
+requests. They do not prove that every field was collected/sent, that a particular
+SDK was active, or that data was sold.

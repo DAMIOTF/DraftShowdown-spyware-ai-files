@@ -1,0 +1,19 @@
+Source: Cpp2IL-wynik-cs/DiffableCs/Scripts/QuestLab/DraftWar/AnalyticsManager.cs
+
+Relevant declared APIs (source line numbers):
+  404  EstablishMilestoneBaseline()
+  446  LogBattleWinMilestones()
+  448  LogProgressionMilestones()
+  456  ProgressionMilestones()
+  475  SetIapCumulativeUsd(int usd, bool markLowerMilestonesFired)
+  477  SetRankedMatchCount(int count, bool markLowerMilestonesFired)
+  481  TrackAdjustCustomEvent(string token)
+  517  TrackMilestoneEvents(IReadOnlyList<AdjustMilestoneEvent> milestones, int currentValue)
+
+AnalyticsConfig.cs adds milestone arrays for commander level, ranked matches,
+ranked league, and cumulative IAP USD. AdjustMilestoneEvent.cs has serialized
+name, threshold, Android token and iOS token fields.
+
+Interpretation: the build declares event instrumentation for progression and
+cumulative spending. These generated method declarations do not prove that a
+particular user's events were transmitted or used for a specific decision.

@@ -1,0 +1,639 @@
+===== Kontekst wywołania DrawCardExponential =====
+		IL_0ad6: ceq
+		IL_0ad8: stloc 26
+		IL_0adc: ldloc 26
+		IL_0ae0: stloc 133
+		IL_0ae4: ldloc 35
+		IL_0ae8: stloc 134
+		IL_0aec: ldloc 26
+		IL_0af0: brtrue IL_1664
+
+		IL_0af5: br IL_0afa
+
+		IL_0afa: ldstr "Method not found @3A763E8"
+		IL_0aff: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0b04: br IL_16c5
+
+		IL_0b09: ldloc 134
+		IL_0b0d: ldfld int32 [mscorlib]System.Int32::m_value
+		IL_0b12: ldc.i4 10
+		IL_0b17: add
+		IL_0b18: stloc 31
+		IL_0b1c: ldloc 131
+		IL_0b20: ldloc 31
+		IL_0b24: add
+		IL_0b25: stloc 137
+		IL_0b29: ldloc 137
+		IL_0b2d: ldc.i4 312
+		IL_0b32: add
+		IL_0b33: stloc 138
+		IL_0b37: ldloc 133
+		IL_0b3b: stloc 26
+		IL_0b3f: ldloc 134
+		IL_0b43: stloc 35
+		IL_0b47: br IL_16c5
+
+		IL_0b4c: ldloca 22
+		IL_0b50: ldarg.0
+		IL_0b51: ldfld class QuestLab.DraftWar.UnitDeck QuestLab.DraftWar.DraftState::opponentDeck
+		IL_0b56: ldstr "Unmanaged memory load: [v323 @ X0_v16+B8]"
+		IL_0b5b: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0b60: ldc.i4.0
+		IL_0b61: conv.i
+		IL_0b62: ldstr "Unmanaged memory load: [v789 @ X25_v5-8]"
+		IL_0b67: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0b6c: ldc.i4.0
+		IL_0b6d: conv.i
+		IL_0b6e: ldloc 140
+		IL_0b72: ldstr "Unmanaged memory load: [v324 @ X0_v18+80]"
+		IL_0b77: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0b7c: ldc.i4.0
+		IL_0b7d: conv.i
+		IL_0b7e: ldstr "Unmanaged memory load: [v325 @ X0_v20+28]"
+		IL_0b83: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0b88: ldc.i4.0
+		IL_0b89: conv.i
+		IL_0b8a: ldstr "Unmanaged memory load: [v326 @ X0_v22+18]"
+		IL_0b8f: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0b94: ldc.i4.0
+		IL_0b95: conv.i
+		IL_0b96: ldarg.0
+		IL_0b97: ldfld float32 QuestLab.DraftWar.DraftState::aiSmartness
+		IL_0b9c: call class QuestLab.DraftWar.WeightedDraftSetup QuestLab.DraftWar.DraftAi::DrawCardExponential(class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&, class QuestLab.DraftWar.UnitDeck, class QuestLab.DraftWar.CardDraftAiSettings, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class QuestLab.DraftWar.AiUnitCountSetup, class QuestLab.DraftWar.AiTendencySetup, class QuestLab.DraftWar.UnitCategories, float32)
+		IL_0ba1: stloc 49
+		IL_0ba5: nop
+		IL_0ba6: br IL_0c0a
+
+		IL_0bab: ldloca 22
+		IL_0baf: ldarg.0
+		IL_0bb0: ldfld class QuestLab.DraftWar.UnitDeck QuestLab.DraftWar.DraftState::opponentDeck
+		IL_0bb5: ldstr "Unmanaged memory load: [v323 @ X0_v16+B8]"
+		IL_0bba: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0bbf: ldc.i4.0
+		IL_0bc0: conv.i
+		IL_0bc1: ldstr "Unmanaged memory load: [v789 @ X25_v5-8]"
+		IL_0bc6: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0bcb: ldc.i4.0
+		IL_0bcc: conv.i
+		IL_0bcd: ldloc 140
+		IL_0bd1: ldstr "Unmanaged memory load: [v324 @ X0_v18+80]"
+		IL_0bd6: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0bdb: ldc.i4.0
+		IL_0bdc: conv.i
+		IL_0bdd: ldstr "Unmanaged memory load: [v325 @ X0_v20+28]"
+		IL_0be2: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0be7: ldc.i4.0
+		IL_0be8: conv.i
+		IL_0be9: ldstr "Unmanaged memory load: [v326 @ X0_v22+18]"
+		IL_0bee: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0bf3: ldc.i4.0
+		IL_0bf4: conv.i
+		IL_0bf5: ldarg.0
+		IL_0bf6: ldfld float32 QuestLab.DraftWar.DraftState::aiSmartness
+
+===== Początek zwykłego DrawCard =====
+	} // end of class <>c
+
+
+	// Fields
+	.field public static literal float32 ExponentialStep = float32(100)
+	.field public static literal float32 ExponentialSmartnessOffset = float32(1.01)
+
+	// Methods
+	.method public hidebysig static 
+		float32 ComputeLogWeight (
+			float32 score,
+			float32 aiSmartness
+		) cil managed 
+	{
+		// Method begins at RVA 0x1de5e0
+		// Header size: 12
+		// Code size: 156 (0x9c)
+		.maxstack 0
+		.locals init (
+			[0] float32,
+			[1] float32,
+			[2] bool,
+			[3] object,
+			[4] bool,
+			[5] object,
+			[6] object,
+			[7] float32,
+			[8] object,
+			[9] native int,
+			[10] object,
+			[11] object,
+			[12] object,
+			[13] object,
+			[14] object,
+			[15] object,
+			[16] object,
+			[17] object,
+			[18] object,
+			[19] object,
+			[20] object,
+			[21] object,
+			[22] float32,
+			[23] float32
+		)
+
+		IL_0000: ldarg aiSmartness
+		IL_0004: conv.r4
+		IL_0005: ldstr "Unmanaged memory load: [1838A20]"
+		IL_000a: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_000f: ldc.i4.0
+		IL_0010: conv.i
+		IL_0011: conv.r4
+		IL_0012: add
+		IL_0013: stloc 0
+		IL_0017: ldloc 0
+		IL_001b: ldc.i4 0
+		IL_0020: clt
+		IL_0022: stloc 2
+		IL_0026: ldloc 2
+		IL_002a: ldc.i4.0
+		IL_002b: ceq
+		IL_002d: stloc 3
+		IL_0031: ldloc 0
+		IL_0035: ldc.i4 0
+		IL_003a: ceq
+		IL_003c: stloc 4
+		IL_0040: ldloc 3
+		IL_0044: not
+		IL_0045: stloc 5
+		IL_0049: ldloc 5
+		IL_004d: ldloc 4
+		IL_0051: or
+		IL_0052: stloc 6
+		IL_0056: ldloc 6
+		IL_005a: brtrue IL_0092
+
+		IL_005f: br IL_0064
+
+		IL_0064: ldstr "Method not found @7F08610"
+		IL_0069: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_006e: ldarg score
+		IL_0072: conv.r4
+		IL_0073: ldc.i4 1120403456
+		IL_0078: conv.r4
+		IL_0079: div
+		IL_007a: stloc 22
+		IL_007e: ldloc 22
+		IL_0082: conv.r4
+		IL_0083: ldloc 0
+		IL_0087: conv.r4
+		IL_0088: mul
+		IL_0089: stloc 23
+		IL_008d: ldloc 23
+		IL_0091: ret
+
+		IL_0092: ldc.i8 4286578688
+		IL_009b: ret
+	} // end of method DraftAi::ComputeLogWeight
+
+	.method public hidebysig static 
+		float32 ComputeRouletteWeight (
+			float32 logWeight,
+			float32 maxLogWeight
+		) cil managed 
+	{
+		// Method begins at RVA 0x1de688
+		// Header size: 12
+		// Code size: 185 (0xb9)
+		.maxstack 0
+		.locals init (
+			[0] float32,
+			[1] object,
+			[2] object,
+			[3] bool,
+			[4] float32,
+			[5] float32,
+			[6] object,
+			[7] native int,
+			[8] object,
+			[9] object,
+			[10] object,
+			[11] object,
+			[12] object,
+			[13] object,
+			[14] object,
+			[15] object,
+			[16] object,
+			[17] object,
+			[18] object,
+			[19] object,
+			[20] object,
+			[21] bool,
+			[22] object,
+			[23] float64,
+			[24] object
+		)
+
+		IL_0000: ldarg maxLogWeight
+		IL_0004: not
+		IL_0005: stloc 1
+		IL_0009: ldc.i4 2139095040
+
+===== Koniec zwykłego DrawCard =====
+		IL_0009: ldc.i4 2139095040
+		IL_000e: ldloc 1
+		IL_0012: and
+		IL_0013: stloc 2
+		IL_0017: ldloc 2
+		IL_001b: ldc.i4 0
+		IL_0020: ceq
+		IL_0022: stloc 3
+		IL_0026: ldc.r8 1
+		IL_002f: stloc 23
+		IL_0033: ldloc 3
+		IL_0037: brtrue IL_00b4
+
+		IL_003c: br IL_0041
+
+		IL_0041: ldarg logWeight
+		IL_0045: conv.r4
+		IL_0046: ldarg maxLogWeight
+		IL_004a: conv.r4
+		IL_004b: sub
+		IL_004c: stloc 4
+		IL_0050: ldstr "Method not found @7F085B0"
+		IL_0055: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_005a: ldloc 4
+		IL_005e: not
+		IL_005f: stloc 24
+		IL_0063: ldc.i4 2139095040
+		IL_0068: ldloc 24
+		IL_006c: and
+		IL_006d: stloc 22
+		IL_0071: ldloc 22
+		IL_0075: ldc.i4 0
+		IL_007a: ceq
+		IL_007c: stloc 21
+		IL_0080: ldloc 21
+		IL_0084: ldc.i4.0
+		IL_0085: ceq
+		IL_0087: stloc 20
+		IL_008b: ldloc 20
+		IL_008f: brtrue IL_00a7
+
+		IL_0094: br IL_0099
+
+		IL_0099: ldc.i4 0
+		IL_009e: stloc 23
+		IL_00a2: br IL_00b4
+
+		IL_00a7: ldloc 4
+		IL_00ab: stloc 23
+		IL_00af: br IL_00b4
+
+		IL_00b4: ldloc 23
+		IL_00b8: ret
+	} // end of method DraftAi::ComputeRouletteWeight
+
+	.method public hidebysig static 
+		class QuestLab.DraftWar.WeightedDraftSetup DrawCard (
+			[in] class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>& currentPool,
+			class QuestLab.DraftWar.UnitDeck opponentDeck,
+			class QuestLab.DraftWar.CardDraftAiSettings settings,
+			class QuestLab.DraftWar.UnitManager unitManager,
+			class QuestLab.DraftWar.AiUnitCountSetup unitCountSetup,
+			class QuestLab.DraftWar.AiTendencySetup tendencySetup,
+			class QuestLab.DraftWar.UnitCategories unitCategories,
+			float32 aiSmartness
+		) cil managed 
+	{
+		// Method begins at RVA 0x1de750
+		// Header size: 12
+		// Code size: 134 (0x86)
+		.maxstack 0
+		.locals init (
+			[0] bool,
+			[1] class QuestLab.DraftWar.UnitManager,
+			[2] class QuestLab.DraftWar.CardDraftAiSettings,
+			[3] class QuestLab.DraftWar.UnitDeck,
+			[4] class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&,
+			[5] float32,
+			[6] class QuestLab.DraftWar.UnitCategories,
+			[7] class QuestLab.DraftWar.AiTendencySetup,
+			[8] class QuestLab.DraftWar.AiUnitCountSetup,
+			[9] class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>,
+			[10] class [mscorlib]System.NullReferenceException,
+			[11] class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>,
+			[12] class QuestLab.DraftWar.WeightedDraftSetup
+		)
+
+		IL_0000: ldarg unitManager
+		IL_0004: ldc.i4 0
+		IL_0009: ceq
+		IL_000b: stloc 0
+		IL_000f: ldloc 0
+		IL_0013: brtrue IL_0078
+
+		IL_0018: br IL_001d
+
+		IL_001d: ldarg unitManager
+		IL_0021: ldc.i4 1
+		IL_0026: call instance class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32> QuestLab.DraftWar.UnitManager::CountUnitsByType(valuetype QuestLab.DraftWar.UnitTeam)
+		IL_002b: stloc 9
+		IL_002f: ldarg unitManager
+		IL_0033: ldc.i4 0
+		IL_0038: call instance class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32> QuestLab.DraftWar.UnitManager::CountUnitsByType(valuetype QuestLab.DraftWar.UnitTeam)
+		IL_003d: stloc 11
+		IL_0041: br IL_0046
+
+		IL_0046: ldarg currentPool
+		IL_004a: ldarg opponentDeck
+		IL_004e: ldarg settings
+		IL_0052: ldloc 9
+		IL_0056: ldloc 11
+		IL_005a: ldarg unitCountSetup
+		IL_005e: ldarg tendencySetup
+		IL_0062: ldarg unitCategories
+		IL_0066: ldarg aiSmartness
+		IL_006a: call class QuestLab.DraftWar.WeightedDraftSetup QuestLab.DraftWar.DraftAi::DrawCard(class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&, class QuestLab.DraftWar.UnitDeck, class QuestLab.DraftWar.CardDraftAiSettings, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class QuestLab.DraftWar.AiUnitCountSetup, class QuestLab.DraftWar.AiTendencySetup, class QuestLab.DraftWar.UnitCategories, float32)
+		IL_006f: stloc 12
+		IL_0073: ldloc 12
+		IL_0077: ret
+
+		IL_0078: newobj instance void [mscorlib]System.NullReferenceException::.ctor()
+		IL_007d: stloc 10
+		IL_0081: ldloc 10
+		IL_0085: ret
+	} // end of method DraftAi::DrawCard
+
+	.method public hidebysig static 
+		class QuestLab.DraftWar.WeightedDraftSetup DrawCard (
+			[in] class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>& currentPool,
+			class QuestLab.DraftWar.UnitDeck opponentDeck,
+			class QuestLab.DraftWar.CardDraftAiSettings settings,
+			class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32> playerArmy,
+			class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32> opponentArmy,
+			class QuestLab.DraftWar.AiUnitCountSetup unitCountSetup,
+			class QuestLab.DraftWar.AiTendencySetup tendencySetup,
+			class QuestLab.DraftWar.UnitCategories unitCategories,
+
+===== Metadane metod DraftAi w okolicy DrawCardExponential =====
+		IL_2727: ldloc 109
+		IL_272b: clt
+		IL_272d: stloc 188
+		IL_2731: ldloc 77
+		IL_2735: stloc 189
+		IL_2739: ldloc 188
+		IL_273d: brtrue IL_27a9
+
+		IL_2742: br IL_1e72
+
+		IL_2747: ldloc 100
+		IL_274b: ldloc 103
+		IL_274f: call instance !0 class [mscorlib]System.Collections.Generic.List`1<object>::get_Item(int32)
+		IL_2754: stloc 77
+		IL_2758: ldloc 77
+		IL_275c: ldc.i4 0
+		IL_2761: ceq
+		IL_2763: stloc 95
+		IL_2767: nop
+		IL_2768: ldc.r8 0.5
+		IL_2771: stloc 40
+		IL_2775: ldc.r8 -1
+		IL_277e: stloc 43
+		IL_2782: nop
+		IL_2783: ldc.i8 9218868437227405312
+		IL_278c: stloc 48
+		IL_2790: ldloc 46
+		IL_2794: stloc 61
+		IL_2798: nop
+		IL_2799: nop
+		IL_279a: nop
+		IL_279b: ldloc 95
+		IL_279f: brtrue IL_1776
+
+		IL_27a4: br IL_1d0a
+
+		IL_27a9: ldloc 189
+		IL_27ad: ret
+
+		IL_27ae: br IL_07ee
+
+		IL_27b3: ldloc 100
+		IL_27b7: ldloc 107
+		IL_27bb: call instance !0 class [mscorlib]System.Collections.Generic.List`1<object>::get_Item(int32)
+		IL_27c0: stloc 74
+		IL_27c4: ldloc 74
+		IL_27c8: ldc.i4 0
+		IL_27cd: ceq
+		IL_27cf: stloc 92
+		IL_27d3: ldloc 45
+		IL_27d7: stloc 237
+		IL_27db: nop
+		IL_27dc: ldloc 92
+		IL_27e0: brtrue IL_1776
+
+		IL_27e5: br IL_1a43
+
+		IL_27ea: ldstr "Warning: Method ends with non empty stack (-120), the output could be wrong!"
+		IL_27ef: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+	} // end of method DraftAi::DrawCard
+
+	.method public hidebysig static 
+		class QuestLab.DraftWar.WeightedDraftSetup DrawCardExponential (
+			[in] class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>& currentPool,
+			class QuestLab.DraftWar.UnitDeck opponentDeck,
+			class QuestLab.DraftWar.CardDraftAiSettings settings,
+			class QuestLab.DraftWar.UnitManager unitManager,
+			class QuestLab.DraftWar.AiUnitCountSetup unitCountSetup,
+			class QuestLab.DraftWar.AiTendencySetup tendencySetup,
+			class QuestLab.DraftWar.UnitCategories unitCategories,
+			float32 aiSmartness
+		) cil managed 
+	{
+		// Method begins at RVA 0x1e0fe4
+		// Header size: 12
+		// Code size: 134 (0x86)
+		.maxstack 0
+		.locals init (
+			[0] bool,
+			[1] class QuestLab.DraftWar.UnitManager,
+			[2] class QuestLab.DraftWar.CardDraftAiSettings,
+			[3] class QuestLab.DraftWar.UnitDeck,
+			[4] class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&,
+			[5] float32,
+			[6] class QuestLab.DraftWar.UnitCategories,
+			[7] class QuestLab.DraftWar.AiTendencySetup,
+			[8] class QuestLab.DraftWar.AiUnitCountSetup,
+			[9] class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>,
+			[10] class [mscorlib]System.NullReferenceException,
+			[11] class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>,
+			[12] class QuestLab.DraftWar.WeightedDraftSetup
+		)
+
+		IL_0000: ldarg unitManager
+		IL_0004: ldc.i4 0
+		IL_0009: ceq
+		IL_000b: stloc 0
+		IL_000f: ldloc 0
+		IL_0013: brtrue IL_0078
+
+		IL_0018: br IL_001d
+
+		IL_001d: ldarg unitManager
+		IL_0021: ldc.i4 1
+		IL_0026: call instance class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32> QuestLab.DraftWar.UnitManager::CountUnitsByType(valuetype QuestLab.DraftWar.UnitTeam)
+		IL_002b: stloc 9
+		IL_002f: ldarg unitManager
+		IL_0033: ldc.i4 0
+		IL_0038: call instance class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32> QuestLab.DraftWar.UnitManager::CountUnitsByType(valuetype QuestLab.DraftWar.UnitTeam)
+		IL_003d: stloc 11
+		IL_0041: br IL_0046
+
+		IL_0046: ldarg currentPool
+		IL_004a: ldarg opponentDeck
+		IL_004e: ldarg settings
+		IL_0052: ldloc 9
+		IL_0056: ldloc 11
+		IL_005a: ldarg unitCountSetup
+		IL_005e: ldarg tendencySetup
+		IL_0062: ldarg unitCategories
+		IL_0066: ldarg aiSmartness
+		IL_006a: call class QuestLab.DraftWar.WeightedDraftSetup QuestLab.DraftWar.DraftAi::DrawCardExponential(class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&, class QuestLab.DraftWar.UnitDeck, class QuestLab.DraftWar.CardDraftAiSettings, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class QuestLab.DraftWar.AiUnitCountSetup, class QuestLab.DraftWar.AiTendencySetup, class QuestLab.DraftWar.UnitCategories, float32)
+		IL_006f: stloc 12
+		IL_0073: ldloc 12
+		IL_0077: ret
+
+		IL_0078: newobj instance void [mscorlib]System.NullReferenceException::.ctor()
+		IL_007d: stloc 10
+		IL_0081: ldloc 10
+		IL_0085: ret
+	} // end of method DraftAi::DrawCardExponential
+
+	.method public hidebysig static 
+		class QuestLab.DraftWar.WeightedDraftSetup DrawCardExponential (
+			[in] class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>& currentPool,
+			class QuestLab.DraftWar.UnitDeck opponentDeck,
+			class QuestLab.DraftWar.CardDraftAiSettings settings,
+			class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32> playerArmy,
+			class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32> opponentArmy,
+			class QuestLab.DraftWar.AiUnitCountSetup unitCountSetup,
+			class QuestLab.DraftWar.AiTendencySetup tendencySetup,
+			class QuestLab.DraftWar.UnitCategories unitCategories,
+			float32 aiSmartness
+		) cil managed 
+	{
+		// Method begins at RVA 0x1e1078
+		// Header size: 12
+		// Code size: 12710 (0x31a6)
+		.maxstack 0
+		.locals init (
+			[0] float32,
+			[1] class QuestLab.DraftWar.UnitCategories,
+			[2] class QuestLab.DraftWar.CardDraftAiSettings,
+			[3] class QuestLab.DraftWar.UnitDeck,
+			[4] class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&,
+			[5] class QuestLab.DraftWar.AiUnitCountSetup,
+			[6] class QuestLab.DraftWar.AiTendencySetup,
+			[7] class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>,
+			[8] object,
+			[9] object,
+			[10] object,
+
+===== Deklaracja i inicjalizacja konfiguracji AI =====
+457747-	} // end of method DeterminismConfig::.ctor
+457748-
+457749-} // end of class DraftShowdown.DeterminismConfig
+457750-
+457751-.class public auto ansi serializable beforefieldinit DraftShowdown.DraftAiConfig
+457752-	extends [mscorlib]System.Object
+457753-{
+457754-	// Fields
+457755:	.field public bool UseExponentialWeights
+457756-
+457757-	// Methods
+457758-	.method public hidebysig specialname rtspecialname 
+457759-		instance void .ctor () cil managed 
+457760-	{
+457761-		// Method begins at RVA 0x1149f0
+457762-		// Header size: 12
+457763-		// Code size: 7 (0x7)
+457764-		.maxstack 0
+457765-		.locals init (
+457766-			[0] class DraftShowdown.DraftAiConfig
+457767-		)
+457768-
+457769-		IL_0000: ldarg.0
+457770-		IL_0001: call instance void [mscorlib]System.Object::.ctor()
+457771-		IL_0006: ret
+457772:	} // end of method DraftAiConfig::.ctor
+457773-
+457774-} // end of class DraftShowdown.DraftAiConfig
+457775-
+457776-.class public auto ansi abstract sealed beforefieldinit DraftShowdown.GameConfig
+457777-	extends [mscorlib]System.Object
+457778-{
+457779-	// Fields
+457780-	.field public static class DraftShowdown.ApplicationManagerConfig ApplicationManagerConfig
+457781-	.field public static class DraftShowdown.BattlePassConfig BattlePassConfig
+457782-	.field public static class DraftShowdown.DraftAiConfig DraftAiConfig
+457783-	.field public static class DraftShowdown.DeterminismConfig DeterminismConfig
+457784-	.field public static class DraftShowdown.IapChangesConfig IapChangesConfig
+457785-	.field public static class DraftShowdown.RatedMatchmakingConfig RatedMatchmakingConfig
+457786-	.field public static class DraftShowdown.UnitsConfig UnitsConfig
+457787-	.field private static bool '<IsLoaded>k__BackingField'
+457788-	.field private static bool '<IsBattlePassAssignmentResolved>k__BackingField'
+457789-	.field private static bool '<IsIapChangesAssignmentResolved>k__BackingField'
+457790-
+457791-	// Methods
+457792-	.method public hidebysig specialname static 
+
+===== Wszystkie metody, które wywołują DrawCard =====
+689351-		IL_0450: ldc.i4.0
+689352-		IL_0451: conv.i
+689353-		IL_0452: ldstr "Unmanaged memory load: [v273 @ X0_v30+18]"
+689354-		IL_0457: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+689355-		IL_045c: ldc.i4.0
+689356-		IL_045d: conv.i
+689357-		IL_045e: ldarg.0
+689358-		IL_045f: ldfld float32 QuestLab.DraftWar.AiOpponentPlayer::_aiSmartness
+689359:		IL_0464: call class QuestLab.DraftWar.WeightedDraftSetup QuestLab.DraftWar.DraftAi::DrawCard(class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&, class QuestLab.DraftWar.UnitDeck, class QuestLab.DraftWar.CardDraftAiSettings, class QuestLab.DraftWar.UnitManager, class QuestLab.DraftWar.AiUnitCountSetup, class QuestLab.DraftWar.AiTendencySetup, class QuestLab.DraftWar.UnitCategories, float32)
+689360-		IL_0469: stloc 46
+689361-		IL_046d: ldloc 46
+689362-		IL_0471: ldc.i4 0
+689363-		IL_0476: ceq
+689364-		IL_0478: stloc 65
+689365-		IL_047c: ldloc 65
+689366-		IL_0480: brtrue IL_0a35
+689367-
+--
+899187-		IL_004a: ldarg opponentDeck
+899188-		IL_004e: ldarg settings
+899189-		IL_0052: ldloc 9
+899190-		IL_0056: ldloc 11
+899191-		IL_005a: ldarg unitCountSetup
+899192-		IL_005e: ldarg tendencySetup
+899193-		IL_0062: ldarg unitCategories
+899194-		IL_0066: ldarg aiSmartness
+899195:		IL_006a: call class QuestLab.DraftWar.WeightedDraftSetup QuestLab.DraftWar.DraftAi::DrawCard(class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&, class QuestLab.DraftWar.UnitDeck, class QuestLab.DraftWar.CardDraftAiSettings, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class QuestLab.DraftWar.AiUnitCountSetup, class QuestLab.DraftWar.AiTendencySetup, class QuestLab.DraftWar.UnitCategories, float32)
+899196-		IL_006f: stloc 12
+899197-		IL_0073: ldloc 12
+899198-		IL_0077: ret
+899199-
+899200-		IL_0078: newobj instance void [mscorlib]System.NullReferenceException::.ctor()
+899201-		IL_007d: stloc 10
+899202-		IL_0081: ldloc 10
+899203-		IL_0085: ret
+--
+1372663-		IL_0be7: ldc.i4.0
+1372664-		IL_0be8: conv.i
+1372665-		IL_0be9: ldstr "Unmanaged memory load: [v326 @ X0_v22+18]"
+1372666-		IL_0bee: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+1372667-		IL_0bf3: ldc.i4.0
+1372668-		IL_0bf4: conv.i
+1372669-		IL_0bf5: ldarg.0
+1372670-		IL_0bf6: ldfld float32 QuestLab.DraftWar.DraftState::aiSmartness
+1372671:		IL_0bfb: call class QuestLab.DraftWar.WeightedDraftSetup QuestLab.DraftWar.DraftAi::DrawCard(class [mscorlib]System.Collections.Generic.List`1<class QuestLab.DraftWar.DraftSetup>&, class QuestLab.DraftWar.UnitDeck, class QuestLab.DraftWar.CardDraftAiSettings, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class [mscorlib]System.Collections.Generic.IDictionary`2<valuetype QuestLab.DraftWar.UnitType, int32>, class QuestLab.DraftWar.AiUnitCountSetup, class QuestLab.DraftWar.AiTendencySetup, class QuestLab.DraftWar.UnitCategories, float32)
+1372672-		IL_0c00: stloc 49
+1372673-		IL_0c04: nop
+1372674-		IL_0c05: br IL_0c0a
+1372675-
+1372676-		IL_0c0a: ldstr "Unmanaged memory load: [8474100]"
+1372677-		IL_0c0f: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+1372678-		IL_0c14: ldc.i4.0
+1372679-		IL_0c15: conv.i

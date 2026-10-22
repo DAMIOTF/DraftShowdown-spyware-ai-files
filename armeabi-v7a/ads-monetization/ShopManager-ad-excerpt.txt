@@ -1,0 +1,14 @@
+Source: Cpp2IL-wynik-cs/DiffableCs/Scripts/QuestLab/DraftWar/ShopManager.cs
+
+Line 494:
+  public int GetAdsReward(int baseReward, bool roundReward = true) { }
+
+Line 532:
+  public void IncreaseAdsWatchedToday(string m_AdTag, int value = 1) { }
+
+Line 591:
+  public void ShowRewardedVideo(Action onRewarded, Action onFailed, string adTag) { }
+
+These declarations connect tagged rewarded-video placements with reward and
+daily-view accounting. Cpp2IL left the method bodies empty; this excerpt does
+not establish runtime call frequency.

@@ -1,0 +1,574 @@
+===== Punktacja kart: pierwszy fragment =====
+		IL_0730: ldc.i4 0
+		IL_0735: ceq
+		IL_0737: stloc 95
+		IL_073b: ldloc 32
+		IL_073f: stloc 148
+		IL_0743: ldloc 33
+		IL_0747: stloc 34
+		IL_074b: ldloc 35
+		IL_074f: stloc 36
+		IL_0753: ldloc 37
+		IL_0757: stloc 38
+		IL_075b: ldloc 54
+		IL_075f: stloc 149
+		IL_0763: ldloc 55
+		IL_0767: stloc 56
+		IL_076b: ldloc 57
+		IL_076f: stloc 58
+		IL_0773: ldloc 59
+		IL_0777: stloc 60
+		IL_077b: ldloc 61
+		IL_077f: stloc 62
+		IL_0783: ldloc 152
+		IL_0787: stloc 64
+		IL_078b: ldloc 209
+		IL_078f: stloc 66
+		IL_0793: ldloc 23
+		IL_0797: stloc 150
+		IL_079b: ldloc 68
+		IL_079f: stloc 151
+		IL_07a3: ldloc 74
+		IL_07a7: stloc 73
+		IL_07ab: ldarg playerArmy
+		IL_07af: stloc 153
+		IL_07b3: ldnull
+		IL_07b4: stloc 154
+		IL_07b8: ldloc 246
+		IL_07bc: stloc 77
+		IL_07c0: ldloc 243
+		IL_07c4: stloc 108
+		IL_07c8: ldloc 109
+		IL_07cc: stloc 110
+		IL_07d0: ldloc 111
+		IL_07d4: stloc 112
+		IL_07d8: ldloc 68
+		IL_07dc: stloc 355
+		IL_07e0: ldloca 17
+		IL_07e4: stloc 113
+		IL_07e8: ldarg unitCategories
+		IL_07ec: stloc 115
+		IL_07f0: ldarg aiSmartness
+		IL_07f4: stloc 119
+		IL_07f8: ldloc 95
+		IL_07fc: brtrue IL_261d
+
+		IL_0801: br IL_0806
+
+		IL_0806: ldarg opponentDeck
+		IL_080a: ldloc 246
+		IL_080e: call instance int32 QuestLab.DraftWar.UnitDeck::GetLevelOf(valuetype QuestLab.DraftWar.UnitType)
+		IL_0813: stloc 247
+		IL_0817: ldloc 111
+		IL_081b: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::LevelWeight
+		IL_0820: stloc 62
+		IL_0824: br IL_2c2b
+
+		IL_0829: ldloc 152
+		IL_082d: conv.r4
+		IL_082e: ldloc 247
+		IL_0832: conv.r4
+		IL_0833: mul
+		IL_0834: stloc 56
+		IL_0838: ldloc 111
+		IL_083c: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::TendencyWeight
+		IL_0841: conv.r4
+		IL_0842: ldloc 209
+		IL_0846: conv.r4
+		IL_0847: mul
+		IL_0848: stloc 248
+		IL_084c: ldloc 111
+		IL_0850: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::LevelWeight
+		IL_0855: conv.r4
+		IL_0856: ldloc 56
+		IL_085a: conv.r4
+		IL_085b: mul
+		IL_085c: stloc 249
+		IL_0860: ldloc 249
+		IL_0864: conv.r4
+		IL_0865: ldloc 248
+		IL_0869: conv.r4
+		IL_086a: add
+		IL_086b: stloc 250
+		IL_086f: ldloc 111
+		IL_0873: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::UnitCountWeight
+		IL_0878: conv.r4
+		IL_0879: ldloc 243
+		IL_087d: conv.r4
+		IL_087e: mul
+		IL_087f: stloc 251
+		IL_0883: ldloc 250
+		IL_0887: conv.r4
+		IL_0888: ldloc 251
+		IL_088c: conv.r4
+		IL_088d: add
+		IL_088e: stloc 60
+		IL_0892: ldstr "Method not found @7F08470"
+		IL_0897: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_089c: ldloc 60
+		IL_08a0: ldc.i4 0
+		IL_08a5: clt
+		IL_08a7: ldc.i4.0
+		IL_08a8: ceq
+		IL_08aa: stloc 253
+		IL_08ae: ldloc 253
+		IL_08b2: brtrue IL_08fa
+
+		IL_08b7: br IL_08bc
+
+		IL_08bc: ldloc 60
+		IL_08c0: ldc.r8 -0.5
+		IL_08c9: ceq
+		IL_08cb: ldc.i4.0
+		IL_08cc: ceq
+		IL_08ce: stloc 254
+		IL_08d2: ldloc 254
+		IL_08d6: brtrue IL_094a
+
+		IL_08db: br IL_08e0
+
+		IL_08e0: ldc.r8 -1
+		IL_08e9: stloc 256
+		IL_08ed: ldloc 17
+
+===== Punktacja kart: logika tendencji i liczebności =====
+
+		IL_12c7: br IL_12cc
+
+		IL_12cc: ldloc 264
+		IL_12d0: ldlen
+		IL_12d1: conv.i4
+		IL_12d2: ldc.i4 6
+		IL_12d7: clt
+		IL_12d9: stloc 297
+		IL_12dd: ldloc 297
+		IL_12e1: ldc.i4.0
+		IL_12e2: ceq
+		IL_12e4: stloc 184
+		IL_12e8: ldloc 264
+		IL_12ec: ldlen
+		IL_12ed: conv.i4
+		IL_12ee: ldc.i4 6
+		IL_12f3: sub
+		IL_12f4: stloc 178
+		IL_12f8: ldloc 178
+		IL_12fc: ldc.i4 0
+		IL_1301: ceq
+		IL_1303: stloc 169
+		IL_1307: ldloc 184
+		IL_130b: not
+		IL_130c: stloc 298
+		IL_1310: ldloc 298
+		IL_1314: ldloc 169
+		IL_1318: or
+		IL_1319: stloc 161
+		IL_131d: ldc.i8 9218868437227405312
+		IL_1326: stloc 148
+		IL_132a: ldloc 23
+		IL_132e: stloc 150
+		IL_1332: ldloc 68
+		IL_1336: stloc 151
+		IL_133a: ldarg settings
+		IL_133e: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::TendencyWeight
+		IL_1343: stloc 152
+		IL_1347: ldarg playerArmy
+		IL_134b: stloc 153
+		IL_134f: ldnull
+		IL_1350: stloc 154
+		IL_1354: ldloc 193
+		IL_1358: stloc 210
+		IL_135c: ldloc 161
+		IL_1360: brtrue IL_2b4d
+
+		IL_1365: br IL_136a
+
+		IL_136a: ldloc 264
+		IL_136e: ldc.i4 80
+		IL_1373: add
+		IL_1374: stloc 299
+		IL_1378: ldloc 295
+		IL_137c: stloc 299
+		IL_1380: ldstr "Method not found @3A3C618"
+		IL_1385: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_138a: ldarg settings
+		IL_138e: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::UnitCountWeight
+		IL_1393: stloc 152
+		IL_1397: ldstr "Method not found @3A3C7F0"
+		IL_139c: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_13a1: br IL_13a6
+
+		IL_13a6: ldloc 301
+		IL_13aa: ldc.i4 0
+		IL_13af: ceq
+		IL_13b1: stloc 302
+		IL_13b5: ldloca 45
+		IL_13b9: stloc 194
+		IL_13bd: ldloc 302
+		IL_13c1: brtrue IL_1444
+
+		IL_13c6: br IL_13cb
+
+		IL_13cb: ldloc 264
+		IL_13cf: stloc 234
+		IL_13d3: ldstr "Unmanaged memory load: [v1332 @ X8_v98 (Il2CppClass<System.Object[]>)+40]"
+		IL_13d8: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_13dd: ldc.i4.0
+		IL_13de: conv.i
+		IL_13df: stloc 194
+		IL_13e3: ldstr "Method not found @3A3C7EC"
+		IL_13e8: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_13ed: ldloc 211
+		IL_13f1: ldc.i4 0
+		IL_13f6: ceq
+		IL_13f8: stloc 219
+		IL_13fc: ldc.i8 9218868437227405312
+		IL_1405: stloc 148
+
+===== Funkcje obliczające wynik =====
+		IL_041c: ldloc 14
+		IL_0420: stloc 50
+		IL_0424: ldarg opponentArmy
+		IL_0428: stloc 52
+		IL_042c: ldarg playerArmy
+		IL_0430: stloc 54
+		IL_0434: nop
+		IL_0435: ldarg aiSmartness
+		IL_0439: stloc 59
+		IL_043d: ldloc 62
+		IL_0441: stloc 61
+		IL_0445: nop
+		IL_0446: ldloc 112
+		IL_044a: stloc 100
+		IL_044e: ldarg aiSmartness
+		IL_0452: stloc 110
+		IL_0456: ldloc 82
+		IL_045a: brtrue IL_1776
+
+		IL_045f: br IL_0464
+
+		IL_0464: ldarg unitCategories
+		IL_0468: ldloc 67
+		IL_046c: call instance valuetype QuestLab.DraftWar.UnitCategory QuestLab.DraftWar.UnitCategories::GetCategory(valuetype QuestLab.DraftWar.UnitType)
+		IL_0471: stloc 68
+		IL_0475: ldarg settings
+		IL_0479: ldc.i4 0
+		IL_047e: ceq
+		IL_0480: stloc 83
+		IL_0484: ldloc 20
+		IL_0488: stloc 21
+		IL_048c: ldloc 22
+		IL_0490: stloc 23
+		IL_0494: ldloc 24
+		IL_0498: stloc 25
+		IL_049c: ldloc 26
+		IL_04a0: stloc 27
+		IL_04a4: ldloc 36
+		IL_04a8: stloc 130
+		IL_04ac: ldloc 37
+		IL_04b0: stloc 38
+		IL_04b4: ldloc 39
+		IL_04b8: stloc 40
+		IL_04bc: ldloc 41
+		IL_04c0: stloc 331
+		IL_04c4: ldloc 42
+		IL_04c8: stloc 43
+		IL_04cc: ldloc 44
+		IL_04d0: stloc 237
+		IL_04d4: ldloc 159
+		IL_04d8: stloc 48
+		IL_04dc: ldloc 14
+		IL_04e0: stloc 50
+		IL_04e4: ldarg opponentArmy
+		IL_04e8: stloc 52
+		IL_04ec: ldarg playerArmy
+		IL_04f0: stloc 54
+		IL_04f4: nop
+		IL_04f5: ldarg aiSmartness
+		IL_04f9: stloc 59
+		IL_04fd: ldloc 62
+		IL_0501: stloc 61
+		IL_0505: nop
+		IL_0506: ldloc 112
+		IL_050a: stloc 100
+		IL_050e: ldarg aiSmartness
+		IL_0512: stloc 110
+		IL_0516: ldloc 83
+		IL_051a: brtrue IL_1776
+
+		IL_051f: br IL_0524
+
+		IL_0524: ldarg settings
+		IL_0528: ldloc 173
+		IL_052c: call instance float32 QuestLab.DraftWar.CardDraftAiSettings::GetRarityMultiplier(valuetype QuestLab.DraftWar.UnitRarity)
+		IL_0531: stloc 237
+		IL_0535: ldloc 66
+		IL_0539: call instance valuetype QuestLab.DraftWar.UnitType QuestLab.DraftWar.DraftSetup::GetAffectedUnitType()
+		IL_053e: stloc 175
+		IL_0542: br IL_0547
+
+		IL_0547: ldarg opponentDeck
+		IL_054b: ldc.i4 0
+		IL_0550: ceq
+		IL_0552: stloc 84
+		IL_0556: ldloc 20
+		IL_055a: stloc 21
+		IL_055e: ldloc 22
+		IL_0562: stloc 23
+		IL_0566: ldloc 24
+		IL_056a: stloc 25
+		IL_056e: ldloc 26
+		IL_0572: stloc 27
+		IL_0576: ldloc 36
+		IL_057a: stloc 130
+		IL_057e: ldloc 37
+		IL_0582: stloc 38
+		IL_0586: ldloc 39
+		IL_058a: stloc 40
+		IL_058e: ldloc 41
+		IL_0592: stloc 331
+		IL_0596: ldloc 42
+		IL_059a: stloc 43
+		IL_059e: ldloc 159
+		IL_05a2: stloc 48
+		IL_05a6: ldloc 14
+		IL_05aa: stloc 50
+		IL_05ae: ldarg opponentArmy
+		IL_05b2: stloc 52
+		IL_05b6: ldarg playerArmy
+		IL_05ba: stloc 54
+		IL_05be: nop
+		IL_05bf: ldarg aiSmartness
+		IL_05c3: stloc 59
+		IL_05c7: ldloc 62
+		IL_05cb: stloc 61
+		IL_05cf: nop
+		IL_05d0: ldloc 112
+		IL_05d4: stloc 100
+		IL_05d8: ldarg aiSmartness
+		IL_05dc: stloc 110
+		IL_05e0: ldloc 84
+		IL_05e4: brtrue IL_1776
+
+		IL_05e9: br IL_05ee
+
+		IL_05ee: ldarg opponentDeck
+		IL_05f2: ldloc 175
+		IL_05f6: call instance int32 QuestLab.DraftWar.UnitDeck::GetLevelOf(valuetype QuestLab.DraftWar.UnitType)
+		IL_05fb: stloc 186
+		IL_05ff: br IL_1fc0
+
+		IL_0604: ldloc 237
+		IL_0608: conv.r8
+		IL_0609: ldloc 186
+		IL_060d: conv.r8
+		IL_060e: mul
+		IL_060f: stloc 38
+		IL_0613: ldarg settings
+		IL_0617: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::TendencyWeight
+		IL_061c: conv.r8
+		IL_061d: ldloc 159
+		IL_0621: conv.r8
+		IL_0622: mul
+		IL_0623: stloc 193
+		IL_0627: ldarg settings
+		IL_062b: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::LevelWeight
+		IL_0630: conv.r8
+		IL_0631: ldloc 38
+		IL_0635: conv.r8
+		IL_0636: mul
+		IL_0637: stloc 194
+		IL_063b: ldloc 194
+		IL_063f: conv.r8
+		IL_0640: ldloc 193
+		IL_0644: conv.r8
+		IL_0645: add
+		IL_0646: stloc 195
+		IL_064a: ldarg settings
+		IL_064e: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::UnitCountWeight
+		IL_0653: conv.r4
+		IL_0654: ldloc 162
+		IL_0658: conv.r4
+		IL_0659: mul
+		IL_065a: stloc 196
+		IL_065e: ldloc 195
+		IL_0662: conv.r8
+		IL_0663: ldloc 196
+		IL_0667: conv.r8
+		IL_0668: add
+		IL_0669: stloc 197
+		IL_066d: ldstr "Method not found @7F08470"
+		IL_0672: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_0677: ldloc 197
+		IL_067b: ldc.i4 0
+		IL_0680: clt
+		IL_0682: ldc.i4.0
+		IL_0683: ceq
+		IL_0685: stloc 199
+		IL_0689: ldloc 199
+		IL_068d: brtrue IL_06ef
+
+		IL_0692: br IL_0697
+
+		IL_0697: ldloc 197
+		IL_069b: ldc.r8 -0.5
+		IL_06a4: ceq
+		IL_06a6: ldc.i4.0
+		IL_06a7: ceq
+		IL_06a9: stloc 200
+		IL_06ad: ldloc 200
+		IL_06b1: brtrue IL_0759
+
+		IL_06b6: br IL_06bb
+
+		IL_06bb: ldc.r8 -1
+		IL_06c4: stloc 205
+		IL_06c8: ldc.r8 -0.5
+		IL_06d1: stloc 40
+		IL_06d5: ldc.r8 0.5
+		IL_06de: stloc 331
+
+===== Konstruktor CardDraftAiSettings =====
+		IL_00a6: stloc 6
+		IL_00aa: ldloc 5
+		IL_00ae: brtrue IL_00d5
+
+		IL_00b3: br IL_00b8
+
+		IL_00b8: ldarg.0
+		IL_00b9: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::LegendaryMultiplier
+		IL_00be: ret
+
+		IL_00bf: ldarg.0
+		IL_00c0: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::CommonMultiplier
+		IL_00c5: ret
+
+		IL_00c6: ldarg.0
+		IL_00c7: ldfld float32 QuestLab.DraftWar.CardDraftAiSettings::EpicMultiplier
+		IL_00cc: stloc 6
+		IL_00d0: br IL_00d5
+
+		IL_00d5: ldloc 6
+		IL_00d9: ret
+	} // end of method CardDraftAiSettings::GetRarityMultiplier
+
+	.method public hidebysig specialname rtspecialname 
+		instance void .ctor () cil managed 
+	{
+		// Method begins at RVA 0x16ba88
+		// Header size: 12
+		// Code size: 47 (0x2f)
+		.maxstack 0
+		.locals init (
+			[0] class QuestLab.DraftWar.CardDraftAiSettings
+		)
+
+		IL_0000: ldarg.0
+		IL_0001: ldstr "Unmanaged memory load: [1837A98]"
+		IL_0006: call void Cpp2ILInjected.Cpp2ILHelpers::NoteDecompilerIssue(string)
+		IL_000b: ldc.i4.0
+		IL_000c: conv.i
+		IL_000d: stfld float32 QuestLab.DraftWar.CardDraftAiSettings::RareMultiplier
+		IL_0012: ldarg.0
+		IL_0013: ldc.r4 0.0
+		IL_0018: stfld float32 QuestLab.DraftWar.CardDraftAiSettings::LevelWeight
+		IL_001d: ldarg.0
+		IL_001e: ldc.r4 1.15
+		IL_0023: stfld float32 QuestLab.DraftWar.CardDraftAiSettings::LegendaryMultiplier
+		IL_0028: ldarg.0
+		IL_0029: call instance void [UnityEngine.CoreModule]UnityEngine.ScriptableObject::.ctor()
+		IL_002e: ret
+	} // end of method CardDraftAiSettings::.ctor
+
+} // end of class QuestLab.DraftWar.CardDraftAiSettings
+
+.class public auto ansi beforefieldinit QuestLab.DraftWar.DeckDraftAiSettings
+	extends [UnityEngine.CoreModule]UnityEngine.ScriptableObject
+{
+	// Fields
+	.field private static literal string weightsGroup = "AI Draft Weights"
+	.field public float32 LevelWeight
+	.field public float32 TendencyWeight
+	.field public float32 SynergyWeight
+	.field private static literal string unitRarityLevelMultiplierGroup = "Unit rarity level multiplier"
+	.field private float32 CommonMultiplier
+	.field private float32 RareMultiplier
+	.field private float32 EpicMultiplier
+	.field private float32 LegendaryMultiplier
+
+	// Methods
+	.method public hidebysig 
+		instance float32 GetRarityMultiplier (
+			valuetype QuestLab.DraftWar.UnitRarity unitRarity
+		) cil managed 
+	{
+		// Method begins at RVA 0x16bac4
+		// Header size: 12
+		// Code size: 218 (0xda)
+		.maxstack 0
+		.locals init (
+			[0] valuetype QuestLab.DraftWar.UnitRarity,
+			[1] bool,
+			[2] bool,
+
+===== Flaga UseExponentialWeights =====
+{
+	// Fields
+	.field public static literal string PremiumProductId = "questlab.draftshowdown.seasonpass"
+
+} // end of class DraftShowdown.BattlePassProducts
+
+.class public auto ansi serializable beforefieldinit DraftShowdown.DeterminismConfig
+	extends [mscorlib]System.Object
+{
+	// Fields
+	.field public bool UseDeterministicCombat
+
+	// Methods
+	.method public hidebysig specialname rtspecialname 
+		instance void .ctor () cil managed 
+	{
+		// Method begins at RVA 0x1149dc
+		// Header size: 12
+		// Code size: 7 (0x7)
+		.maxstack 0
+		.locals init (
+			[0] class DraftShowdown.DeterminismConfig
+		)
+
+		IL_0000: ldarg.0
+		IL_0001: call instance void [mscorlib]System.Object::.ctor()
+		IL_0006: ret
+	} // end of method DeterminismConfig::.ctor
+
+} // end of class DraftShowdown.DeterminismConfig
+
+.class public auto ansi serializable beforefieldinit DraftShowdown.DraftAiConfig
+	extends [mscorlib]System.Object
+{
+	// Fields
+	.field public bool UseExponentialWeights
+
+	// Methods
+	.method public hidebysig specialname rtspecialname 
+		instance void .ctor () cil managed 
+	{
+		// Method begins at RVA 0x1149f0
+		// Header size: 12
+		// Code size: 7 (0x7)
+		.maxstack 0
+		.locals init (
+			[0] class DraftShowdown.DraftAiConfig
+		)
+
+		IL_0000: ldarg.0
+		IL_0001: call instance void [mscorlib]System.Object::.ctor()
+		IL_0006: ret
+	} // end of method DraftAiConfig::.ctor
+
+} // end of class DraftShowdown.DraftAiConfig
+
+.class public auto ansi abstract sealed beforefieldinit DraftShowdown.GameConfig
+	extends [mscorlib]System.Object
+{
+	// Fields
+	.field public static class DraftShowdown.ApplicationManagerConfig ApplicationManagerConfig
