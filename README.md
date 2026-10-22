@@ -8,6 +8,8 @@ I am done pretending this is normal. I reverse-engineered the Android APKs (v1.1
 
 You are not competing against real people. You are playing against lifeless, rigged scripts while the app silently harvests your digital footprint to sell you out.
 
+![image](/VOODO.png)
+
 ---
 
 ### 🤖 THE MULTIPLAYER IS A LIE: THE "WOW" EMOTE TEST
